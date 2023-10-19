@@ -47,7 +47,7 @@ public class AmazonCategoryNavigationTest extends BasePage{
         electronicsCategoryPage.addMostExpensiveItemsToCart();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(electronicsCategoryPage.isCartContains(1), "Shopping cart should contain 2 items.");
+        softAssert.assertTrue(electronicsCategoryPage.isCartContains(2), "Shopping cart should contain 2 items.");
 
     }
 
