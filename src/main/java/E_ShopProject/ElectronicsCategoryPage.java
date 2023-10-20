@@ -3,13 +3,9 @@ package E_ShopProject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.testng.Assert;
-
 import java.util.List;
 import java.util.Set;
-
-
 
 public class ElectronicsCategoryPage{
     private final WebDriver driver;
@@ -21,7 +17,6 @@ public class ElectronicsCategoryPage{
     private static final By ITEMS = By.cssSelector(".s-result-list .s-result-item.s-asin");
     private static final By CART_COUNT= By.id("nav-cart-count");
     private static final By NAV_CART = By.id("nav-cart");
-
 
     public ElectronicsCategoryPage(WebDriver driver) {
          this.driver = driver;
