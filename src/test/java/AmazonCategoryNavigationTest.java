@@ -10,8 +10,6 @@ public class AmazonCategoryNavigationTest extends BasePage{
     private HomePage homePage;
     private ElectronicsCategoryPage electronicsCategoryPage;
 
-
-
     @BeforeClass
     public void initializePageObjects() {
 
@@ -33,23 +31,17 @@ public class AmazonCategoryNavigationTest extends BasePage{
         softAssert.assertEquals(Actual_pageTitle,Expected_pageTitle,"Page title after navigating landed on" + Actual_pageTitle);
         softAssert.assertAll();
     }
-
     @Test
     public void addItemsToCartTest() throws InterruptedException {
         String searchItem = "Apple Watch";
         String[] expectedNames = {"Apple-Cellular-Stainless","Apple-Cellular-Stainless--Milanese-Resistant"};
         homePage.navigateToAmazon();
         homePage.clickShopByCategory();
-
         electronicsCategoryPage.clickElectronicsCategory();
         electronicsCategoryPage.searchItem(searchItem);
         electronicsCategoryPage.sortByPriceHighToLow();
         electronicsCategoryPage.addMostExpensiveItemsToCart();
-
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(electronicsCategoryPage.isCartContains(2), "Shopping cart should contain 2 items.");
-
     }
-
-
 }
